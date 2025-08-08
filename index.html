@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Guide</title>
+    <!-- Use Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#F0EFE8] min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-[#2C465C] text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo added here -->
+            <div class="flex items-center">
+                <img src="https://themrscollective.com/cdn/shop/files/Untitled_design_2810_29.png?v=1753888143&width=500" alt="MRS Logo" class="h-12 mr-4 rounded-lg">
+                <h1 class="text-3xl font-bold">Digital Marketing Guide</h1>
+            </div>
+            <p class="text-lg hidden md:block">Your go-to resource for digital marketing strategies and insights.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <!-- Introduction Section -->
+        <div id="intro-section" class="mb-8 p-6 bg-white rounded-lg shadow-md">
+            <h1 class="text-4xl font-bold text-[#2C465C] mb-2">Level Up Your Digital Skills</h1>
+            <h2 class="text-xl text-gray-700 font-semibold mb-4">Digital marketing tips and strategies to refine your skills.</h2>
+            <p class="text-gray-600 leading-relaxed">This guide is for digital marketers looking to learn, grow their skills, test new strategies, practice their information, and more.</p>
+        </div>
+        
+        <!-- Topics Grid - This will be hidden when a sub-page is active -->
+        <div id="topics-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards will be injected here by JavaScript -->
+        </div>
+
+        <!-- Sub-page content container - This will be hidden initially -->
+        <div id="sub-page-content" class="hidden">
+            <!-- Content will be injected here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-4 mt-auto">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Digital Marketing Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for dynamic content and navigation -->
+    <script>
+        // Data for the different digital marketing topics
+        const guides = [
+            {
+                id: 'seo',
+                title: 'Search Engine Optimization (SEO)',
+                description: 'Learn how to improve your website\'s visibility on search engines like Google and Bing.',
+                fullContent: `
+                    <p><strong>What is SEO?</strong></p>
+                    <p>SEO is the process of optimizing your website to rank higher in search engine results pages (SERPs). This leads to increased organic (non-paid) traffic. The core pillars of SEO are on-page SEO, off-page SEO, and technical SEO.</p>
+                    <br>
+                    <p><strong>Key SEO Concepts:</strong></p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Keywords:</strong> The words and phrases people type into search engines. Researching relevant keywords is the foundation of any SEO strategy.</li>
+                        <li><strong>On-Page SEO:</strong> Optimizing individual web pages to rank higher and earn more relevant traffic in search engines. This includes optimizing title tags, meta descriptions, headings, and content.</li>
+                        <li><strong>Off-Page SEO:</strong> Actions taken outside of your own website to impact your rankings. The most common off-page activity is building backlinks from other reputable websites.</li>
+                        <li><strong>Technical SEO:</strong> Ensuring your website is technically sound for search engine crawlers. This includes site speed, mobile-friendliness, and site architecture.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'content-marketing',
+                title: 'Content Marketing',
+                description: 'Discover how to create and distribute valuable, relevant, and consistent content to attract and retain a clearly defined audience.',
+                fullContent: `
+                    <p><strong>What is Content Marketing?</strong></p>
+                    <p>Content marketing involves the creation and sharing of online material (such as videos, blogs, and social media posts) that does not explicitly promote a brand but is intended to stimulate interest in its products or services.</p>
+                    <br>
+                    <p><strong>Effective Content Strategy:</strong></p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Know Your Audience:</strong> Understand who you are creating content for. What are their pain points, interests, and questions?</li>
+                        <li><strong>Choose Your Format:</strong> Content can take many forms: blog posts, articles, ebooks, white papers, videos, podcasts, and infographics. Choose the formats that best suit your audience and message.</li>
+                        <li><strong>Promote Your Content:</strong> Don't just create it and forget it. Use social media, email marketing, and paid advertising to get your content in front of your target audience.</li>
+                        <li><strong>Measure Results:</strong> Track key performance indicators (KPIs) like traffic, engagement, leads, and conversions to understand what content works best.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'social-media',
+                title: 'Social Media Marketing',
+                description: 'Utilize social media platforms to connect with your audience, build your brand, and drive website traffic.',
+                fullContent: `
+                    <p><strong>Leveraging Social Media:</strong></p>
+                    <p>Social media marketing is the use of social media platforms to connect with your audience to build your brand, increase sales, and drive website traffic. This involves publishing great content, listening to and engaging your followers, and running social media advertisements.</p>
+                    <br>
+                    <p><strong>Building a Social Media Presence:</strong></p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Choose the Right Platforms:</strong> Not all social media platforms are right for every business. Focus on where your target audience spends their time.</li>
+                        <li><strong>Develop a Content Calendar:</strong> Plan your posts in advance to ensure consistency and a steady stream of valuable content.</li>
+                        <li><strong>Engage with Your Community:</strong> Respond to comments, messages, and mentions. This builds trust and shows that you care about your audience.</li>
+                        <li><strong>Analyze Performance:</strong> Use the analytics tools provided by the platforms to see what's working and what's not.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'email-marketing',
+                title: 'Email Marketing',
+                description: 'Learn how to send targeted emails to your audience to build relationships, promote content, and drive sales.',
+                fullContent: `
+                    <p><strong>The Power of Email:</strong></p>
+                    <p>Email marketing is a powerful way to connect with your audience directly. It allows you to nurture leads, drive conversions, and build a loyal customer base. The key is to provide value, not just sales pitches.</p>
+                    <br>
+                    <p><strong>Creating an Email Campaign:</strong></p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Build Your List:</strong> Use lead magnets and signup forms on your website to grow your email list organically.</li>
+                        <li><strong>Segment Your Audience:</strong> Divide your list into groups based on demographics, interests, or past behavior. This allows for more personalized and effective messaging.</li>
+                        <li><strong>Craft Engaging Content:</strong> Write compelling subject lines and create email content that is valuable, easy to read, and includes a clear call-to-action (CTA).</li>
+                        <li><strong>Automate Workflows:</strong> Use marketing automation tools to send welcome emails, follow-up sequences, and other triggered messages automatically.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'analytics',
+                title: 'Digital Analytics',
+                description: 'Understand how to track, measure, and analyze website data to make informed business decisions.',
+                fullContent: `
+                    <p><strong>Understanding Digital Analytics:</strong></p>
+                    <p>Digital analytics is the process of collecting, measuring, analyzing, and reporting on web data. It is crucial for understanding user behavior, optimizing your marketing efforts, and achieving your business goals.</p>
+                    <br>
+                    <p><strong>Key Analytics Metrics:</strong></p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Traffic:</strong> The number of visitors to your website. You can break this down by source (e.g., organic search, social, direct).</li>
+                        <li><strong>Bounce Rate:</strong> The percentage of visitors who leave your site after viewing only one page. A high bounce rate can indicate poor content or user experience.</li>
+                        <li><strong>Conversion Rate:</strong> The percentage of visitors who complete a desired action, such as making a purchase or filling out a form.</li>
+                        <li><strong>Time on Page:</strong> How long visitors spend on a specific page. This can be an indicator of content quality and engagement.</li>
+                    </ul>
+                `
+            }
+        ];
+
+        // Get DOM elements
+        const introSection = document.getElementById('intro-section');
+        const topicsGrid = document.getElementById('topics-grid');
+        const subPageContent = document.getElementById('sub-page-content');
+
+        // Function to create and append topic cards
+        function createTopicCards() {
+            guides.forEach(guide => {
+                const card = document.createElement('a');
+                card.href = `?page=${guide.id}`; // Link to the new sub-page
+                card.className = 'block bg-white rounded-lg shadow-lg p-6 flex flex-col transform hover:scale-105 transition-transform duration-300';
+                card.innerHTML = `
+                    <h3 class="text-xl font-semibold text-[#2C465C] mb-2">${guide.title}</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">${guide.description}</p>
+                    <span class="mt-auto text-center bg-[#D27E4B] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#B86A3A] transition-colors duration-200">
+                        View Guide
+                    </span>
+                `;
+                topicsGrid.appendChild(card);
+            });
+        }
+        
+        // Function to render a sub-page
+        function renderSubPage(pageId) {
+            const selectedGuide = guides.find(g => g.id === pageId);
+            if (selectedGuide) {
+                // Hide main content
+                introSection.classList.add('hidden');
+                topicsGrid.classList.add('hidden');
+                
+                // Show sub-page container
+                subPageContent.classList.remove('hidden');
+                
+                // Construct the sub-page content
+                subPageContent.innerHTML = `
+                    <button onclick="window.history.back()" class="flex items-center text-[#D27E4B] hover:text-[#B86A3A] font-semibold mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Go Back
+                    </button>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="text-3xl font-bold text-[#2C465C] mb-4">${selectedGuide.title}</h2>
+                        <div class="text-gray-700 leading-relaxed">${selectedGuide.fullContent}</div>
+                    </div>
+                `;
+            } else {
+                // If page not found, redirect to home
+                window.location.href = window.location.origin + window.location.pathname;
+            }
+        }
+        
+        // Main logic to determine which view to show
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const pageId = urlParams.get('page');
+
+            if (pageId) {
+                renderSubPage(pageId);
+            } else {
+                // Show main content and topics grid
+                introSection.classList.remove('hidden');
+                topicsGrid.classList.remove('hidden');
+                createTopicCards();
+            }
+        });
+
+    </script>
+</body>
+</html>
